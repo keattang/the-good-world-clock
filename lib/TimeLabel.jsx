@@ -32,7 +32,6 @@ const minToLeftOffset = (minutes) => {
 
 const TimeLabel = (props) => {
     const styles = {
-        color: 'white',
         left: `${minToLeftOffset(props.minutes)}px`,
         bottom: `${HOUR_TICK_PX_HEIGHT + 5}px`,
         position: 'absolute',

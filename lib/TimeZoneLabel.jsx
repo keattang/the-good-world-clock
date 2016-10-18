@@ -1,9 +1,8 @@
 import React from 'react'
 
-const getCityFromTimezone = (timeZone) => timeZone.split('/').pop().replace(/_/g, ' ')
+const getCityFromTimezone = (timeZone) => timeZone.code.split('/').pop().replace(/_/g, ' ')
 
 const styles = {
-    color: 'white',
     fontSize: '1.6em',
     marginTop: '10px',
     marginLeft: '10px',
@@ -16,7 +15,7 @@ const TimeZoneLabel = (props) => {
 }
 
 TimeZoneLabel.propTypes = {
-    timeZone: React.PropTypes.string
+    timeZone: React.PropTypes.object
 }
 
 export default TimeZoneLabel

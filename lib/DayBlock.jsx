@@ -18,12 +18,11 @@ const getLeftOffset = (time) => {
 }
 
 const DayBlock = (props) => {
-    const time = moment.tz(props.currentTime, props.timeZone)
+    const time = moment.tz(props.currentTime, props.timeZone.code)
     const styles = {
         width: DAY_BAR_PX_WIDTH + 'px',
         height: '100%',
         backgroundColor: '#21252b',
-        color: 'white',
         position: 'relative',
         left: getLeftOffset(time)
     }
@@ -37,7 +36,7 @@ const DayBlock = (props) => {
 }
 
 DayBlock.propTypes = {
-    timeZone: React.PropTypes.string,
+    timeZone: React.PropTypes.object,
     currentTime: React.PropTypes.instanceOf(Date)
 }
 

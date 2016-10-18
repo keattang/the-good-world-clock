@@ -1,27 +1,27 @@
 import React from 'react'
 import DayBlock from './DayBlock'
 import TimeZoneLabel from './TimeZoneLabel'
+import RemoveTimeZoneButton from './RemoveTimeZoneButton'
 
-const TimeZoneRow = (props) => {
+const TimeZoneRow = ({timeZone, rowIndex, currentTime}) => {
     const dayBlocks = [
-        <DayBlock currentTime={props.currentTime} timeZone={props.timeZone} key={`day_1`}/>
+        <DayBlock currentTime={currentTime} timeZone={timeZone} key={`day_1`}/>
     ]
     const styles = {
         width: '100%',
         height: '100px',
-        position: 'absolute',
-        top: `${props.rowIndex * 100}px`
     }
     return (
         <div className="time-zone-row" style={styles}>
-            <TimeZoneLabel timeZone={props.timeZone} />
+            <TimeZoneLabel timeZone={timeZone} />
+            <RemoveTimeZoneButton rowIndex={rowIndex} />
             {dayBlocks}
         </div>
     )
 }
 
 TimeZoneRow.propTypes = {
-    timeZone: React.PropTypes.string,
+    timeZone: React.PropTypes.object,
     rowIndex: React.PropTypes.number,
     currentTime: React.PropTypes.instanceOf(Date)
 }
