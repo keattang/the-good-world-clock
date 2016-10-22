@@ -6,7 +6,7 @@ const styles = {
     fontSize: '1.6em',
     marginTop: '10px',
     marginLeft: '10px',
-    position: 'absolute',
+    position: 'fixed',
     zIndex: 1
 }
 

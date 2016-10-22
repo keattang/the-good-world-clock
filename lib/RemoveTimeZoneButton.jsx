@@ -5,7 +5,7 @@ import removeButton from './svg/removeButton'
 import Svg from './Svg'
 
 const styles = {
-    position: 'absolute',
+    position: 'fixed',
     right: 0,
     zIndex: 1,
     cursor: 'pointer',
