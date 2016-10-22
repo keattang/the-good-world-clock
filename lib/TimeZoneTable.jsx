@@ -7,7 +7,7 @@ const styles = {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    overflowX: 'hidden'
+    overflowX: 'scroll'
 }
 
 const TimeZoneTable = ({timeZones, currentTime}) => {
