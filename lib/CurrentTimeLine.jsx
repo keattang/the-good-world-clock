@@ -6,7 +6,7 @@ const styles = {
     height: '100%',
     width: `${TIME_LINE_PX_WIDTH}px`,
     backgroundColor: 'red',
-    left: `${Math.floor(window.innerWidth / 2)}px`,
+    left: `50vw`,
     position: 'absolute'
 }
 

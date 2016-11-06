@@ -7,7 +7,7 @@ import Svg from './Svg'
 const styles = {
     cursor: 'pointer',
     margin: '15px',
-    position: 'absolute',
+    position: 'fixed',
 }
 
 const iconStyles = {
@@ -16,7 +16,7 @@ const iconStyles = {
     stroke: 'white',
     fill: 'none',
     strokeWidth: '3px',
-    margin: 'auto'
+    margin: 'auto',
 }
 
 const AddTimeZoneButton = ({ onClick }) => {
@@ -38,7 +38,6 @@ AddTimeZoneButton.propTypes = {
 const mapDispatchToProps = (dispatch) => {
     return {
         onClick: () => {
-            console.log('Add button clicked')
             dispatch(toggleTimeZoneAdder())
         }
     }

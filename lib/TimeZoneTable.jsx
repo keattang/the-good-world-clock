@@ -10,16 +10,36 @@ const styles = {
     overflowX: 'scroll'
 }
 
-const TimeZoneTable = ({timeZones, currentTime}) => {
-    const timeZoneRows = timeZones.map((timeZone, i) => {
-        return <TimeZoneRow currentTime={currentTime} timeZone={timeZone} rowIndex={i} key={`timezone_${i}`} />
-    })
-    return (
-        <div className="time-zone-table" style={styles}>
-            {timeZoneRows}
-            <AddTimeZoneButton />
-        </div>
-    )
+class TimeZoneTable extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            scrollPos: 0,
+        }
+        this.handleScroll = this.handleScroll.bind(this)
+    }
+
+    handleScroll(event) {
+        this.setState({
+          scrollPos: event.target.scrollLeft
+        })
+    }
+
+    render() {
+        const timeZoneRows = this.props.timeZones.map((timeZone, i) => {
+            return <TimeZoneRow
+                currentTime={this.props.currentTime} timeZone={timeZone}
+                rowIndex={i} key={`timezone_${i}`} scrollPos={this.state.scrollPos}
+            />
+        })
+
+        return (
+            <div className="time-zone-table" style={styles} onScroll={this.handleScroll}>
+                {timeZoneRows}
+                <AddTimeZoneButton />
+            </div>
+        )
+    }
 }
 
 TimeZoneTable.propTypes = {

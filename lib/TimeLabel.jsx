@@ -1,5 +1,7 @@
 import React from 'react'
 
+import minToTime from './utils/minToTime'
+
 import {
     MINUTE_TICK_PX_WIDTH,
     MINUTE_SPACE_PX_WIDTH,
@@ -9,20 +11,6 @@ import {
 } from './constants'
 
 // const isWholeHour = (hours) => hours % 1 === 0
-
-const padZerosLeft = (number, digits) => {
-    const numZeros = Math.max(digits - number.toString().length, 0)
-    let value = ''
-    for (var i = 0; i < numZeros; i++) {
-        value += '0'
-    }
-    value += number
-    return value
-}
-
-const minToTime = (minutes) => {
-    return `${padZerosLeft(Math.floor(minutes / 60), 2)}:${padZerosLeft(minutes % 60, 2)}`
-}
 
 const minToLeftOffset = (minutes) => {
     return ((minutes / MINUTE_INTERVAL)

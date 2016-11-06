@@ -5,7 +5,6 @@ import TimeZoneFinder from './TimeZoneFinder'
 import { addTimeZone, toggleTimeZoneAdder } from './redux/actions'
 
 const TimeZoneAdder = ({show, onTimeZoneSelect, onCancelClick}) => {
-    console.log('TimeZoneAdder rendered')
     return (
         <Modal
             show={show}

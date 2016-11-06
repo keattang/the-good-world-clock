@@ -7,6 +7,7 @@ const styles = {
     marginTop: '10px',
     marginLeft: '10px',
     position: 'fixed',
+    left: 0,
     zIndex: 1
 }
 
