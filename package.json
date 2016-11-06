@@ -4,7 +4,8 @@
   "description": "A nice interface for visulising the time around the world.",
   "scripts": {
     "test": "test",
-    "start": "webpack-dev-server --progress --colors --inline"
+    "start": "webpack-dev-server --progress --colors --inline",
+    "build": "webpack -p"
   },
   "keywords": [
     "clock"
