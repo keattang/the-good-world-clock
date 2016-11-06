@@ -5,7 +5,7 @@ A world clock that is actually good.
 `npm install`
 
 ## Build
-`webpack`
+`npm run build`
 
 ## Run
 `npm start`
